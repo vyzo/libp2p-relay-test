@@ -13,10 +13,10 @@ ID=$1
 IP=$2
 
 echo ">>> Testing direct connection"
-test-client /ip4/$IP/tcp/4001/ipfs/$ID
+$HOME/go/bin/test-client /ip4/$IP/tcp/4001/ipfs/$ID
 
 echo ">>> Testing relayed connections"
 for relay in $(cat $SCRIPT_PATH/relays.txt); do
     echo ">>> Test $relay"
-    test-client $relay/p2p-circuit/ipfs/$ID
+    $HOME/go/bin/test-client $relay/p2p-circuit/ipfs/$ID
 done
