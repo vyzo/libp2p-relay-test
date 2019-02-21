@@ -18,6 +18,5 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 
 # build test programs
 echo ">>> Building test programs"
-go get github.com/vyzo/libp2p-relay-test
-cd ~/go/src/github.com/vyzo/libp2p-relay-test
-go install ./...
+go get github.com/vyzo/libp2p-relay-test/test-server
+go get github.com/vyzo/libp2p-relay-test/test-client
