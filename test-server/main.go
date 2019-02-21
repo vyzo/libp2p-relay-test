@@ -99,7 +99,9 @@ func main() {
 			log.Printf("ERROR connecting to %s: %s", pi.ID.Pretty(), err)
 		}
 	}
-	log.Printf("Done")
+	log.Printf("Ready")
+
+	select {}
 }
 
 func handleStream(s inet.Stream) {
