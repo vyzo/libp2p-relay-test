@@ -32,7 +32,7 @@ func main() {
 
 	ctx := context.Background()
 
-	host, err := libp2p.New(ctx, libp2p.NoListenAddrs)
+	host, err := libp2p.New(ctx, libp2p.NoListenAddrs, libp2p.EnableRelay())
 	if err != nil {
 		log.Fatal(err)
 	}
