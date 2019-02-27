@@ -20,3 +20,6 @@ export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 echo ">>> Building test programs"
 go get github.com/vyzo/libp2p-relay-test/test-server
 go get github.com/vyzo/libp2p-relay-test/test-client
+go get github.com/vyzo/libp2p-relay-test/raw-test-server
+go get github.com/vyzo/libp2p-relay-test/raw-test-proxy
+go get github.com/vyzo/libp2p-relay-test/raw-test-client
