@@ -9,7 +9,7 @@ import (
 
 func main() {
 	if len(os.Args) != 3 {
-		log.Fatal("expected one argument; the listen and destination addresses")
+		log.Fatal("expected two arguments; the listen and destination addresses")
 	}
 
 	listenAddr := os.Args[1]
