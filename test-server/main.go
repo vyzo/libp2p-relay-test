@@ -56,6 +56,8 @@ func main() {
 	relayAddrStr := flag.String("relays", "", "comma separated list of relays")
 	testFile := flag.String("file", "data", "data file to serve")
 
+	flag.Parse()
+
 	if *relayAddrStr != "" {
 		relayAddrs = relayAddrs[:0]
 		for _, s := range strings.Split(*relayAddrStr, ",") {
