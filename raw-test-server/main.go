@@ -30,7 +30,7 @@ func main() {
 	for {
 		c, err := ln.Accept()
 		if err != nil {
-			log.Printf("Error accepting conneciton: %s", err)
+			log.Printf("Error accepting connection: %s", err)
 			continue
 		}
 
