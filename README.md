@@ -12,23 +12,23 @@ At the time of this writing (2019/2/21) there are 15 relays operated by PL to su
 IPFS and libp2p applications.
 The relays are spread over 5 aws regions, with 9 in the US (N.Virgina, Ohio, Oregon) and 6 in Europe (Frankfurt, Dublin).
 
-Results:
+Results (Updated 2019/3/11 for large yamux window):
 
-| Relay                                          | ping    | transfer time    | region    |
-|------------------------------------------------|---------|------------------|-----------|
-| direct connection (baseline)                   | 7.7ms   | 33.964118735s    |           |
-| QmTxKmg6bHwH3kvAwiuFpir9Ee3ogStqjkNeg8Lt7V4iWW | 10.1ms  | 2m27.574585977s  | Frankfurt |
-| QmTt4EmqFDsYJiypRD5U4dUDzramwLVCgDQJS9GzkHWJGR | 11.5ms  | 1m1.178714762s   | Frankfurt |
-| QmSqKqGZ5yr8adWK5txTn1BqG3Em6RhjL3LM2Q4pjUfYMP | 11.8ms  | 1m0.324375898s   | Frankfurt |
-| QmZ5UovPa7H7Mqe31crwhmoEgAz8XZ6s1stzzWSNKFzuqU | 12.6ms  | 1m25.655036374s  | Dublin    |
-| QmbLjvQtV1kkiBh9cWGeXaBoaoWkdnm6QDUFrf2LAkecTH | 12.7ms  | 1m23.266873724s  | Dublin    |
-| QmQUPL5gvWp3VDBrouhpZx2L6un2ZBzMbLmcnjK45TMuVv | 12.7ms  | 53.261012677s    | Dublin    |
-| QmWKiiMyB1qtBs6atLC7UXTk6kw8au2p6LGrET6AkmTCRr | 75.2ms  | 4m15.151337098s  | Ohio      |
-| QmPZ3ZfLNSiiQXj75Ft5Qs2qnPCt1Csp1nZBUppfY997Yb | 75.4ms  | 5m27.643753171s  | Ohio      |
-| QmYwiV8rxauHpPCbLukjwHAsy3AkLU4U7VF7NrMTxWsJS8 | 75.9ms  | 15m49.825359214s | Ohio      |
-| Qmbyw5e8pemFWb27Z6JJtR8gQ3hMRRkzynSYn66DmQ6yP4 | 85.0ms  | 3m38.97912766s   | Virginia  |
-| QmaXbbcs7LRFuEoQcxfXqziZATzS68WT5DgFjYFgn3YYLX | 85.0ms  | 4m2.533593947s   | Virginia  |
-| QmeaqKEz7NipyX5YJhtFb7NdAGjgp4wzGfHEpXESrtSL6Y | 85.0ms  | 5m55.927897621s  | Virginia  |
-| QmbYSi1jdhnz5D4PiY5AB1CVRYK37A4K4jNamp655wTvWC | 140.2ms | 18m28.022029431s | Oregon    |
-| QmaZK14yReY9Bio4Wxj8NLH7vmEBh91J4rS7HVktRhHiV8 | 144.2ms | 5m21.409484466s  | Oregon    |
-| Qmbn1WTN8WRPPhmayAe2eiMdcgKqdtm9MbWKga59bhFEoW | 144.9ms | 7m11.629286569s  | Oregon    |
+| Relay                                          | ping relay | ping server | transfer time    | region    |
+|------------------------------------------------|------------|-------------|------------------|-----------|
+| direct connection (baseline)                   |            |     7.4ms   |   7.187864928s   |           |
+| QmZ5UovPa7H7Mqe31crwhmoEgAz8XZ6s1stzzWSNKFzuqU |  12.7ms    |    23.2ms   |  26.343105791s   | Dublin    |
+| QmbLjvQtV1kkiBh9cWGeXaBoaoWkdnm6QDUFrf2LAkecTH |  12.7ms    |    23.2ms   |  21.850558434s   | Dublin    |
+| QmQUPL5gvWp3VDBrouhpZx2L6un2ZBzMbLmcnjK45TMuVv |  12.7ms    |    23.1ms   |  21.481653414s   | Dublin    |
+| QmTxKmg6bHwH3kvAwiuFpir9Ee3ogStqjkNeg8Lt7V4iWW |  11.8ms    |    26.8ms   |  35.163579596s   | Frankfurt |
+| QmTt4EmqFDsYJiypRD5U4dUDzramwLVCgDQJS9GzkHWJGR |   9.9ms    |    26.8ms   |  58.232045306s   | Frankfurt |
+| QmSqKqGZ5yr8adWK5txTn1BqG3Em6RhjL3LM2Q4pjUfYMP |  10.0ms    |    28.3ms   |  22.855141011s   | Frankfurt |
+| QmWKiiMyB1qtBs6atLC7UXTk6kw8au2p6LGrET6AkmTCRr |  76.0ms    |   154.2ms   | 1m40.915977947s  | Ohio      |
+| QmPZ3ZfLNSiiQXj75Ft5Qs2qnPCt1Csp1nZBUppfY997Yb |  75.3ms    |   154.3ms   | 1m40.047935383s  | Ohio      |
+| QmYwiV8rxauHpPCbLukjwHAsy3AkLU4U7VF7NrMTxWsJS8 |  75.2ms    |   153.6ms   | 1m43.054258421s  | Ohio      |
+| Qmbyw5e8pemFWb27Z6JJtR8gQ3hMRRkzynSYn66DmQ6yP4 |  85.0ms    |   173.7ms   | 1m55.582224015s  | Virginia  |
+| QmaXbbcs7LRFuEoQcxfXqziZATzS68WT5DgFjYFgn3YYLX |  85.0ms    |   173.7ms   | 1m53.344062343s  | Virginia  |
+| QmeaqKEz7NipyX5YJhtFb7NdAGjgp4wzGfHEpXESrtSL6Y |  85.0ms    |   173.7ms   | 2m37.460513334s  | Virginia  |
+| QmbYSi1jdhnz5D4PiY5AB1CVRYK37A4K4jNamp655wTvWC | 143.8ms    |   299.8ms   | 3m22.792653437s  | Oregon    |
+| QmaZK14yReY9Bio4Wxj8NLH7vmEBh91J4rS7HVktRhHiV8 | 143.5ms    |   303.2ms   | 3m18.798269751s  | Oregon    |
+| Qmbn1WTN8WRPPhmayAe2eiMdcgKqdtm9MbWKga59bhFEoW | 143.4ms    |   302.2ms   | 3m21.895076093s  | Oregon    |
