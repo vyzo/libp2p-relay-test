@@ -32,3 +32,20 @@ Results (Updated 2019/3/11 for large yamux window):
 | QmbYSi1jdhnz5D4PiY5AB1CVRYK37A4K4jNamp655wTvWC | 143.8ms    |   299.8ms   | 3m22.792653437s  | Oregon    |
 | QmaZK14yReY9Bio4Wxj8NLH7vmEBh91J4rS7HVktRhHiV8 | 143.5ms    |   303.2ms   | 3m18.798269751s  | Oregon    |
 | Qmbn1WTN8WRPPhmayAe2eiMdcgKqdtm9MbWKga59bhFEoW | 143.4ms    |   302.2ms   | 3m21.895076093s  | Oregon    |
+
+# Stress Testing
+
+We stress test a relay by running multiple test clients and test servers.
+We start with 1 test server and 100 clients, and increment by adding servers with a 100 clients each.
+At 10 servers/1000 clients the relay becomes cpu-saturated.
+
+Netdata screenshots:
+
+![netdata-1-100](https://ipfs.io/ipfs/QmRx9rxB49v5trApfnAg5hi4t3eedWLG3yu6wQzd6o3sjY)
+
+![netdata-5-500](https://ipfs.io/ipfs/QmVbS46mxvJ6PTHaYgG6hUjT8vkFhTngpgTUfh7tkvojDH)
+
+![netdata-10-100](https://ipfs.io/ipfs/Qmdi62ApVYxTtHXBLJpesRTt6xndG59mgmVPC1Rj9ibnTp)
+
+
+A netdata snapshot from the saturated relay is available in [netdata-10-1000.snapshot](https://ipfs.io/ipfsQmdCM7HkwiAYrKkdpZNAKuJrife9WsTwsUN9YREXtnrYoi) for interactive exploration.
