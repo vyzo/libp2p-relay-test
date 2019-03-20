@@ -48,4 +48,4 @@ At 10 servers/1000 clients the relay becomes cpu-saturated.
 10 servers/1000 clients:
 ![netdata-10-100](https://ipfs.io/ipfs/Qmdi62ApVYxTtHXBLJpesRTt6xndG59mgmVPC1Rj9ibnTp)
 
-A netdata snapshot from the saturated relay is available in [netdata-10-1000.snapshot](https://ipfs.io/ipfsQmdCM7HkwiAYrKkdpZNAKuJrife9WsTwsUN9YREXtnrYoi) for interactive exploration.
+A netdata snapshot from the saturated relay is available in [netdata-10-1000.snapshot](https://ipfs.io/ipfs/QmdCM7HkwiAYrKkdpZNAKuJrife9WsTwsUN9YREXtnrYoi) for interactive exploration.
