@@ -39,13 +39,13 @@ We stress test a relay by running multiple test clients and test servers.
 We start with 1 test server and 100 clients, and increment by adding servers with a 100 clients each.
 At 10 servers/1000 clients the relay becomes cpu-saturated.
 
-Netdata screenshots:
-
+1 server/100 clients:
 ![netdata-1-100](https://ipfs.io/ipfs/QmRx9rxB49v5trApfnAg5hi4t3eedWLG3yu6wQzd6o3sjY)
 
+5 servers/500 clients:
 ![netdata-5-500](https://ipfs.io/ipfs/QmVbS46mxvJ6PTHaYgG6hUjT8vkFhTngpgTUfh7tkvojDH)
 
+10 servers/1000 clients:
 ![netdata-10-100](https://ipfs.io/ipfs/Qmdi62ApVYxTtHXBLJpesRTt6xndG59mgmVPC1Rj9ibnTp)
-
 
 A netdata snapshot from the saturated relay is available in [netdata-10-1000.snapshot](https://ipfs.io/ipfsQmdCM7HkwiAYrKkdpZNAKuJrife9WsTwsUN9YREXtnrYoi) for interactive exploration.
