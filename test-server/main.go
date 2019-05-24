@@ -25,21 +25,15 @@ var testFilePath string
 
 func init() {
 	for _, s := range []string{
-		"/ip4/35.175.201.95/tcp/4001/ipfs/QmPZ3ZfLNSiiQXj75Ft5Qs2qnPCt1Csp1nZBUppfY997Yb",
-		"/ip4/18.232.56.199/tcp/4001/ipfs/QmWKiiMyB1qtBs6atLC7UXTk6kw8au2p6LGrET6AkmTCRr",
-		"/ip4/35.172.224.10/tcp/4001/ipfs/QmYwiV8rxauHpPCbLukjwHAsy3AkLU4U7VF7NrMTxWsJS8",
-		"/ip4/18.188.53.89/tcp/4001/ipfs/Qmbyw5e8pemFWb27Z6JJtR8gQ3hMRRkzynSYn66DmQ6yP4",
-		"/ip4/18.224.32.43/tcp/4001/ipfs/QmaXbbcs7LRFuEoQcxfXqziZATzS68WT5DgFjYFgn3YYLX",
-		"/ip4/18.191.192.216/tcp/4001/ipfs/QmeaqKEz7NipyX5YJhtFb7NdAGjgp4wzGfHEpXESrtSL6Y",
-		"/ip4/18.236.86.245/tcp/4001/ipfs/Qmbn1WTN8WRPPhmayAe2eiMdcgKqdtm9MbWKga59bhFEoW",
-		"/ip4/34.209.142.65/tcp/4001/ipfs/QmaZK14yReY9Bio4Wxj8NLH7vmEBh91J4rS7HVktRhHiV8",
-		"/ip4/54.191.81.56/tcp/4001/ipfs/QmbYSi1jdhnz5D4PiY5AB1CVRYK37A4K4jNamp655wTvWC",
-		"/ip4/34.251.29.51/tcp/4001/ipfs/QmTxKmg6bHwH3kvAwiuFpir9Ee3ogStqjkNeg8Lt7V4iWW",
-		"/ip4/54.171.172.82/tcp/4001/ipfs/QmSqKqGZ5yr8adWK5txTn1BqG3Em6RhjL3LM2Q4pjUfYMP",
-		"/ip4/54.194.107.96/tcp/4001/ipfs/QmTt4EmqFDsYJiypRD5U4dUDzramwLVCgDQJS9GzkHWJGR",
-		"/ip4/3.121.215.168/tcp/4001/ipfs/QmbLjvQtV1kkiBh9cWGeXaBoaoWkdnm6QDUFrf2LAkecTH",
-		"/ip4/18.184.154.188/tcp/4001/ipfs/QmZ5UovPa7H7Mqe31crwhmoEgAz8XZ6s1stzzWSNKFzuqU",
-		"/ip4/18.184.60.108/tcp/4001/ipfs/QmQUPL5gvWp3VDBrouhpZx2L6un2ZBzMbLmcnjK45TMuVv",
+		"/ip4/147.75.84.57/tcp/4001/p2p/QmZP8NCi1L2LS8K2DoG175tH4mSe8Z4ygcVXkwFxnyeMLL",
+		"/ip4/147.75.80.35/tcp/4001/p2p/QmU5jkMcfaZ4N1B4MzMXdCZY2pJ3re5YaPB7UjiyqShwT9",
+		"/ip4/147.75.80.33/tcp/4001/p2p/QmSn4heyhN27h8QX6hEgWeLw2kMo75ZEwj1ECk1c4khUPN",
+		"/ip4/147.75.106.163/tcp/4001/p2p/QmRdjvsyoNjA2ZfAQBtQ7A2m5NmtSXLgxE55Brn1AUjZ1v",
+		"/ip4/139.178.64.247/tcp/4001/p2p/QmVbReJM8RpHxZcMCmdSubBfBX7VdYiCn4piAmFxaGUDmJ",
+		"/ip4/147.75.105.219/tcp/4001/p2p/QmTtFWmQ3qrp166m96ibL2jW2Doz4tJjo2CwQfYNaFb3XZ",
+		"/ip4/139.178.69.3/tcp/4001/p2p/QmdGQoGuK3pao6bRDqGSDvux5SFHa4kC2XNFfHFcvcbydY",
+		"/ip4/147.75.109.65/tcp/4001/p2p/QmcYZo7xDLm8sNakKe8UK9AXjoGXGvngpD6apqmTqu7HzU",
+		"/ip4/139.178.69.15/tcp/4001/p2p/QmTg7DdGo519B7KdzFppTaK5i8WGWu9erGhxsLafxRd6gp",
 	} {
 		a, err := ma.NewMultiaddr(s)
 		if err != nil {
