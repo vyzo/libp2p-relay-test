@@ -87,7 +87,7 @@ func main() {
 		}
 		log.Printf("Connecting to %s", pi.ID.Pretty())
 
-		cctx, cancel := context.WithTimeout(ctx, 10*time.Second)
+		cctx, cancel := context.WithTimeout(ctx, 30*time.Second)
 		err = host.Connect(cctx, *pi)
 		cancel()
 
