@@ -43,13 +43,10 @@ func main() {
 	}
 
 	pctx, cancel := context.WithTimeout(ctx, 1*time.Second)
-	ch, err := ping.Ping(pctx, host, pi.ID)
+	ch := ping.Ping(pctx, host, pi.ID)
 	defer cancel()
-	if err != nil {
-		log.Fatal(err)
-	}
 
-	for t := range ch {
-		fmt.Printf("%s\n", t)
+	for r := range ch {
+		fmt.Printf("%s\n", r.RTT)
 	}
 }
